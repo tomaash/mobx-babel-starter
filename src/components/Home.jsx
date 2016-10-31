@@ -22,7 +22,7 @@ export default class Home extends Component {
             <h4>A simple starting point for React with routing, data-fetching and state management.</h4>
           </div>
           <div className="github-buttons">
-            <a href="https://github.com/mhaagens/react-mobx-react-router4-boilerplate" target="_blank">Download from GitHub</a>
+            <a href="https://github.com/tomaash/mobx-babel-starter" target="_blank">Download from GitHub</a>
           </div>
         </header>
         <main>
