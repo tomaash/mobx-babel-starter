@@ -1,6 +1,6 @@
 {
-  "name": "MartinsReactBoilerplate",
-  "version": "1.0.0",
+  "name": "mobx-babel-starter",
+  "version": "0.0.1",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "ES6",
     "ES7"
   ],
-  "author": "Martin Haagensli",
-  "license": "ISC",
+  "author": "Tomas Holas",
+  "license": "no-license",
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
@@ -62,7 +62,7 @@
     "whatwg-fetch": "^1.0.0"
   },
   "repository": {
-    "url": "git@github.com:mhaagens/react-mobx-react-router4-boilerplate.git",
+    "url": "git@github.com:tomaash/mobx-babel-starter.git",
     "type": "git"
   }
 }
