@@ -43,6 +43,9 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.EnvironmentPlugin([
+      'TEST_ENV_VAR'
+    ]),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')

@@ -24,6 +24,7 @@ export default class Home extends Component {
           <div className='github-buttons'>
             <a href='https://github.com/tomaash/mobx-babel-starter' target='_blank'>Download from GitHub</a>
           </div>
+          <p>Variable from build environment: {process.env.TEST_ENV_VAR}</p>
         </header>
         <main>
           <div className='section-header'>

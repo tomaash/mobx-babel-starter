@@ -13,14 +13,14 @@ export default class Subpage extends Component {
   }
   render() {
     return (
-      <div className="page posts">
+      <div className='page posts'>
         <h1>Posts</h1>
-        <p className="subheader">Posts are fetched from jsonplaceholder.typicode.com</p>
+        <p className='subheader'>Posts are fetched from jsonplaceholder.typicode.com</p>
         <hr />
         <ul>
           {this.store.items && this.store.items.length ? this.store.items.slice(6, 12).map(post => {
             return <li key={post.id}>
-              <Link to={`${this.props.pathname}/${post.id}`} activeClassName="active">
+              <Link to={`${this.props.pathname}/${post.id}`} activeClassName='active'>
                 <h1>{post.title}</h1>
               </Link>
               <p>{post.body.substring(0, 120)}</p>

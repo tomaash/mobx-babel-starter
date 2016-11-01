@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import TopNav from './TopNav'
 import Button from './ui/Button'
 
-@inject("store") @observer
+@inject('store') @observer
 export default class TopBar extends Component {
 
   constructor(props) {
@@ -22,7 +22,7 @@ export default class TopBar extends Component {
   render() {
     const { authenticated } = this.store
     return (
-      <div className="topbar">
+      <div className='topbar'>
         <TopNav />
         <Button onClick={this.authenticate.bind(this)} title={authenticated ? 'Log out' : 'Sign in'} />
       </div>

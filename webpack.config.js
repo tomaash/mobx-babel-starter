@@ -42,6 +42,9 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.EnvironmentPlugin([
+      'TEST_ENV_VAR'
+    ]),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
