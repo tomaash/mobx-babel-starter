@@ -18,6 +18,9 @@ module.exports = {
     filename: 'assets/[name].[hash].js',
     chunkFilename: 'assets/[name].[chunkhash].js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devtool: 'cheap-module-source-map',
   module: {
     loaders: [{

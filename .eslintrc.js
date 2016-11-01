@@ -18,6 +18,7 @@ module.exports = {
     "react"
   ],
   "rules": {
+
     "indent": [
       "warn",
       2
@@ -30,6 +31,8 @@ module.exports = {
       "warn",
       "never"
     ],
-    "no-console": 0
+    "no-console": 0,
+    "react/prop-types": 1,
+    "no-unused-vars": 1
   }
 };
