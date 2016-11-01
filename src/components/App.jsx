@@ -29,6 +29,7 @@ export default class App extends Component {
             {/*<DevTools />*/}
             <TopBar />
             <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
+            <Match exactly pattern='/other' component={require('react-router?name=other!./Other')} />
             <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
             <Match pattern='/posts/:id' component={require('react-router?name=subitem!./SubItem')} />
             <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
