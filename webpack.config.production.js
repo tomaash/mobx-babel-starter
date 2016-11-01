@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
-var precss = require('precss');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path')
+var webpack = require('webpack')
+var precss = require('precss')
+var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: {
     vendor: ['react', 'react-dom', 'react-router'],
@@ -28,8 +28,8 @@ module.exports = {
       include: path.join(__dirname, 'src'),
       loader: 'babel-loader',
       query: {
-        "presets": ["es2015", "stage-0", "react"],
-        "plugins": ['transform-async-to-generator', 'transform-decorators-legacy']
+        'presets': ['es2015', 'stage-0', 'react'],
+        'plugins': ['transform-async-to-generator', 'transform-decorators-legacy']
       }
     }, {
       test: /\.scss$/i,
@@ -55,7 +55,7 @@ module.exports = {
       debug: true,
       options:  {
         postcss: function() {
-          return [precss, autoprefixer];
+          return [precss, autoprefixer]
         },
         context: path.join(__dirname, 'src'),
         output: {
@@ -72,10 +72,10 @@ module.exports = {
         warnings: false
       }
     }),
-    new ExtractTextPlugin("assets/styles.css"),
+    new ExtractTextPlugin('assets/styles.css'),
     new HtmlWebpackPlugin({
       hash: false,
       template: './index.hbs'
     })
   ],
-};
+}

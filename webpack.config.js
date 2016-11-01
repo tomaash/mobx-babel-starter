@@ -1,8 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
-var precss = require('precss');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
+var webpack = require('webpack')
+var precss = require('precss')
+var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: [
     'react-hot-loader/patch',
@@ -27,12 +27,12 @@ module.exports = {
       include: path.join(__dirname, 'src'),
       loader: 'babel-loader',
       query: {
-        "presets": ["es2015", "stage-0", "react"],
-        "plugins": ["react-hot-loader/babel", 'transform-async-to-generator', 'transform-decorators-legacy']
+        'presets': ['es2015', 'stage-0', 'react'],
+        'plugins': ['react-hot-loader/babel', 'transform-async-to-generator', 'transform-decorators-legacy']
       }
     }, {
       test: /\.scss$/,
-      loader: "style!css!postcss!resolve-url!sass?sourceMap"
+      loader: 'style!css!postcss!resolve-url!sass?sourceMap'
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
@@ -52,9 +52,9 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       test: /\.scss$/,
       debug: true,
-      options:  {
+      options: {
         postcss: function() {
-          return [precss, autoprefixer];
+          return [precss, autoprefixer]
         },
         context: path.join(__dirname, 'src'),
         output: {
@@ -63,4 +63,4 @@ module.exports = {
       }
     })
   ],
-};
+}

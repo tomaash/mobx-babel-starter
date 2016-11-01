@@ -2,7 +2,8 @@ module.exports = {
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true
+    "node": true,
+    "es6": true,
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "plugins": ["react"],
@@ -18,7 +19,6 @@ module.exports = {
     "react"
   ],
   "rules": {
-
     "indent": [
       "warn",
       2
@@ -32,7 +32,11 @@ module.exports = {
       "never"
     ],
     "no-console": 0,
+    "no-unused-vars": 1,
+    "jsx-quotes": [
+      "warn",
+      "prefer-single"
+    ],
     "react/prop-types": 1,
-    "no-unused-vars": 1
   }
 };

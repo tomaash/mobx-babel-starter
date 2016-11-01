@@ -14,7 +14,7 @@ export default class TopBar extends Component {
   }
 
   authenticate(e) {
-    if (e) e.preventDefault();
+    if (e) e.preventDefault()
     console.log('CLICKED BUTTON')
     this.store.authenticate()
   }

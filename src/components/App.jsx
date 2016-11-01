@@ -16,7 +16,7 @@ export default class App extends Component {
 
   }
   authenticate(e) {
-    if (e) e.preventDefault();
+    if (e) e.preventDefault()
     this.props.store.authenticate()
   }
   render() {
@@ -24,18 +24,18 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Provider store={this.store}>
-          <div className="wrapper">
+          <div className='wrapper'>
             {/*<DevTools />*/}
             <TopBar />
 
-            <Match exactly pattern="/" component={require('react-router?name=home!./Home')} />
-            <Match exactly pattern="/posts" component={require('react-router?name=subpage!./Subpage')} />
-            <Match pattern="/posts/:id" component={require('react-router?name=subitem!./Subitem')} />
-            <Match exactly pattern="/login" component={require('react-router?name=login!./Login')} />
+            <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
+            <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
+            <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
+            <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
             <Miss component={require('react-router?name=notfound!./NotFound')} />
             {!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
             <footer>
-              Cobbled together by @tomaash & <a href="https://twitter.com/mhaagens" target="_blank">@mhaagens</a> | github: <a href="https://github.com/mhaagens" target="_blank">mhaagens</a>
+              Cobbled together by @tomaash & <a href='https://twitter.com/mhaagens' target='_blank'>@mhaagens</a> | github: <a href='https://github.com/mhaagens' target='_blank'>mhaagens</a>
             </footer>
           </div>
         </Provider>

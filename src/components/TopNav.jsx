@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Link } from 'react-router'
 
-@inject("store") @observer
+@inject('store') @observer
 export default class TopNav extends Component {
 
   constructor(props) {
@@ -11,7 +11,7 @@ export default class TopNav extends Component {
   }
 
   authenticate(e) {
-    if (e) e.preventDefault();
+    if (e) e.preventDefault()
     this.props.store.authenticate()
   }
 
@@ -19,8 +19,8 @@ export default class TopNav extends Component {
     const { authenticated, authenticating } = this.store
     return (
       <nav>
-        <Link to="/" activeOnlyWhenExact activeClassName="active">Home</Link>
-        {authenticated && <Link to="/posts" activeClassName="active">Posts</Link>}
+        <Link to='/' activeOnlyWhenExact activeClassName='active'>Home</Link>
+        {authenticated && <Link to='/posts' activeClassName='active'>Posts</Link>}
       </nav>
     )
   }

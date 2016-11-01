@@ -5,7 +5,7 @@ import { Match, Link } from 'react-router'
 import Protected from './Protected'
 import DataWrapper from './DataWrapper'
 
-@Protected @DataWrapper @inject("store") @observer
+@Protected @DataWrapper @inject('store') @observer
 export default class Subpage extends Component {
   constructor(props) {
     super(props)
