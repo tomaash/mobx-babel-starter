@@ -16,6 +16,8 @@ export default class Home extends Component {
         <header>
           <div className='hero-unit'>
             <div className='react-logo'></div>
+            <h1>Tom's new change</h1>
+            <br/>
             <h1>React MobX React-Router 4 Boilerplate</h1>
           </div>
           <div className='hero-subunit'>
