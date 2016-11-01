@@ -6,7 +6,7 @@ import DevTools from 'mobx-react-devtools'
 import TopBar from './TopBar'
 import Home from './Home'
 import Login from './Login'
-import SubItem from './Subitem'
+import SubItem from './SubItem'
 import Subpage from './Subpage'
 import NotFound from './NotFound'
 
@@ -34,7 +34,7 @@ export default class App extends Component {
             <TopBar />
             <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
             <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
-            <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
+            <Match pattern='/posts/:id' component={require('react-router?name=subitem!./SubItem')} />
             <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
             <Miss component={NotFound} />
             {!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
