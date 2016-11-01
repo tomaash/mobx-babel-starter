@@ -20,6 +20,7 @@ export default class TopNav extends Component {
     return (
       <nav>
         <Link to='/' activeOnlyWhenExact activeClassName='active'>Home</Link>
+        <Link to='/other' activeOnlyWhenExact activeClassName='active'>Other</Link>
         {authenticated && <Link to='/posts' activeClassName='active'>Posts</Link>}
       </nav>
     )

@@ -8,6 +8,7 @@ import Home from './Home'
 import Login from './Login'
 import SubItem from './SubItem'
 import Subpage from './Subpage'
+import Other from './Other'
 import NotFound from './NotFound'
 
 @observer
@@ -34,6 +35,7 @@ export default class App extends Component {
             <TopBar />
             <Match exactly pattern='/' component={Home} />
             <Match exactly pattern='/posts' component={Subpage} />
+            <Match exactly pattern='/other' component={Other} />
             <Match pattern='/posts/:id' component={SubItem} />
             <Match exactly pattern='/login' component={Login} />
             <Miss component={NotFound} />
