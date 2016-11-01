@@ -4,10 +4,6 @@ import { Provider, observer } from 'mobx-react'
 import DevTools from 'mobx-react-devtools'
 
 import TopBar from './TopBar'
-import Home from './Home'
-import Login from './Login'
-import SubItem from './SubItem'
-import Subpage from './Subpage'
 import NotFound from './NotFound'
 
 @observer
