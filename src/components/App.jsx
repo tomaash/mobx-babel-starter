@@ -4,6 +4,11 @@ import { Provider, observer } from 'mobx-react'
 import DevTools from 'mobx-react-devtools'
 
 import TopBar from './TopBar'
+import Home from './Home'
+import Login from './Login'
+import SubItem from './SubItem'
+import Subpage from './Subpage'
+import NotFound from './NotFound'
 
 @observer
 export default class App extends Component {
@@ -27,12 +32,11 @@ export default class App extends Component {
           <div className='wrapper'>
             {/*<DevTools />*/}
             <TopBar />
-
-            <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
-            <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
-            <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
-            <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
-            <Miss component={require('react-router?name=notfound!./NotFound')} />
+            <Match exactly pattern='/' component={Home} />
+            <Match exactly pattern='/posts' component={Subpage} />
+            <Match pattern='/posts/:id' component={SubItem} />
+            <Match exactly pattern='/login' component={Login} />
+            <Miss component={NotFound} />
             {!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
             <footer>
               Cobbled together by @tomaash & <a href='https://twitter.com/mhaagens' target='_blank'>@mhaagens</a> | github: <a href='https://github.com/mhaagens' target='_blank'>mhaagens</a>
@@ -43,3 +47,9 @@ export default class App extends Component {
     )
   }
 }
+
+
+            // <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
+            // <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
+            // <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
+            // <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
