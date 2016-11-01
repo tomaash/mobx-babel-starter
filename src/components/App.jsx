@@ -8,7 +8,6 @@ import Home from './Home'
 import Login from './Login'
 import SubItem from './SubItem'
 import Subpage from './Subpage'
-import Other from './Other'
 import NotFound from './NotFound'
 
 @observer
@@ -33,11 +32,10 @@ export default class App extends Component {
           <div className='wrapper'>
             {/*<DevTools />*/}
             <TopBar />
-            <Match exactly pattern='/' component={Home} />
-            <Match exactly pattern='/posts' component={Subpage} />
-            <Match exactly pattern='/other' component={Other} />
-            <Match pattern='/posts/:id' component={SubItem} />
-            <Match exactly pattern='/login' component={Login} />
+            <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
+            <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
+            <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
+            <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
             <Miss component={NotFound} />
             {!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
             <footer>
@@ -51,7 +49,3 @@ export default class App extends Component {
 }
 
 
-            // <Match exactly pattern='/' component={require('react-router?name=home!./Home')} />
-            // <Match exactly pattern='/posts' component={require('react-router?name=subpage!./Subpage')} />
-            // <Match pattern='/posts/:id' component={require('react-router?name=subitem!./Subitem')} />
-            // <Match exactly pattern='/login' component={require('react-router?name=login!./Login')} />
