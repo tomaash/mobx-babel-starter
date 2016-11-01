@@ -6,7 +6,7 @@ import DevTools from 'mobx-react-devtools'
 import TopBar from './TopBar'
 import Home from './Home'
 import Login from './Login'
-import SubItem from './SubItem'
+import SubItem from './Subitem'
 import Subpage from './Subpage'
 import NotFound from './NotFound'
 
