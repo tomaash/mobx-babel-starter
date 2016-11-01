@@ -8,7 +8,8 @@
     "build": "rimraf ./dist && webpack --config webpack.config.production.js",
     "preview": "http-server ./dist -p 1234 -c-1",
     "server": "http-server ./dist -p $PORT",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "React",
@@ -20,6 +21,10 @@
   ],
   "author": "Tomas Holas",
   "license": "no-license",
+  "repository": {
+    "url": "git@github.com:tomaash/mobx-babel-starter.git",
+    "type": "git"
+  },
   "devDependencies": {
     "webpack-dev-server": "^2.1.0-beta.8",
     "babel-eslint": "^7.1.0",
@@ -63,8 +68,8 @@
     "webpack": "^2.1.0-beta.25",
     "whatwg-fetch": "^1.0.0"
   },
-  "repository": {
-    "url": "git@github.com:tomaash/mobx-babel-starter.git",
-    "type": "git"
+  "engines": {
+    "node": "~7.0.0",
+    "npm": "~3.10.8"
   }
 }
